@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" "data-theme=light">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<style>
+
+.wrapper {
+    height: 200%;
+    width: 100%;
+    background:#F5F5F5;
+}
+
+.wrapper h3 {
+    position: relative;
+    top: 0%;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    opacity: 0.8
+}
+
+.boxes div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff
+}
+
+.boxes div:nth-child(1) {
+    top: 70%;
+    left: 10%;
+    animation: box-animate 10s infinite
+}
+
+.boxes div:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    animation: box-animate 9s infinite
+}
+
+.boxes div:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    animation: box-animate 6s infinite
+}
+
+.boxes div:nth-child(4) {
+    top: 80%;
+    left: 60%;
+    animation: box-animate 15s infinite
+}
+
+.boxes div:nth-child(5) {
+    top: 30%;
+    left: 30%;
+    animation: box-animate 9s infinite
+}
+
+.boxes div:nth-child(6) {
+    top: 90%;
+    left: 90%;
+    animation: box-animate 12s infinite
+}
+
+.boxes div:nth-child(7) {
+    top: 80%;
+    left: 30%;
+    animation: box-animate 2s infinite
+}
+
+.boxes div:nth-child(8) {
+    top: 40%;
+    left: 20%;
+    animation: box-animate 2s infinite
+}
+
+.boxes div:nth-child(9) {
+    top: 50%;
+    left: 80%;
+    animation: box-animate 2s infinite
+}
+
+@keyframes box-animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0
+    }
+}
+
+
+
+body {
+  margin: 0;
+    font-family: 'Cormorant', serif;
+    background: #262626f;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color:silver;
+}
+
+.topnav a {
+  float: left;
+ 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav-centered a {
+  float: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+<!-----------image grid---------------!>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0px;
+ 
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 40%;
+  padding: 0 8px;
+}
+
+.img-circle{
+border-radius:30%;
+}
+
+.column img {
+  margin-top: 30px;
+  margin-left:40px;
+  vertical-align:left;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.article-list {
+  color:#313437;
+  background-color:;
+}
+
+.article-list p {
+  color:#7d8285;
+}
+
+.article-list h2 {
+  font-weight:bold;
+  margin-bottom:40px;
+  padding-top:40px;
+  color:inherit;
+
+}
+
+@media (max-width:767px) {
+  .article-list h2 {
+    margin-bottom:25px;
+    padding-top:25px;
+    font-size:24px;
+  }
+}
+
+.article-list .intro {
+  font-size:16px;
+  max-width:500px;
+  margin:0 auto;
+}
+
+.article-list .intro p {
+  margin-bottom:0;
+}
+
+.article-list .articles {
+  padding-bottom:40px;
+}
+
+.article-list .item {
+  padding-top:50px;
+  min-height:425px;
+  text-align:center;
+}
+
+.article-list .item .name {
+  font-weight:bold;
+  font-size:16px;
+  margin-top:20px;
+  color:inherit;
+}
+
+.article-list .item .description {
+  font-size:14px;
+  margin-top:15px;
+  margin-bottom:0;
+}
+
+.article-list .item .action {
+  font-size:24px;
+  width:24px;
+  margin:22px auto 0;
+  line-height:1;
+  display:block;
+  color:#4f86c3;
+  opacity:0.85;
+  transition:opacity 0.2s;
+  text-decoration:none;
+}
+
+.article-list .item .action:hover {
+  opacity:1;
+}
+
+
+
+<!-----testmonasl---!>
+body1 {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Cormorant', serif;
+    background: #262626
+}
+
+.container-fluid {
+    margin-top:75px; !important
+	margin-bottom:100px;
+	
+}
+
+p {
+    font-size: 20px;
+    line-height: 33px !important;
+    color: #fff
+}
+
+.small {
+    letter-spacing: 0.5px !important
+}
+
+.card {
+    box-shadow: 0px 5px 16px rgba(223, 241, 223, 0.5);
+    transition: 0.8s;
+    background: #333;
+    ;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 7px !important
+}
+
+.card-header,
+.card-footer {
+    border-radius: 7px !important
+}
+
+.card:after {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    z-index: 9999;
+    height: 100%;
+    pointer-events: none
+}
+
+.card-title img {
+    z-index: 99999 !important
+}
+
+.card .layer {
+    position:relative ;
+    width: 100%;
+    height:100%;
+    background: linear-gradient(#03a9f4, #e91ee3);
+    left: 0;
+    z-index: 1;
+    transition: 0.5s
+}
+
+.card:hover {
+    box-shadow: -5px 50px 100px rgba(223, 241, 223, 0.5)
+}
+
+.card:hover hr {
+    background-color: #fff
+}
+
+.card:hover h4 {
+    font-weight: 600
+}
+
+.card:hover p {
+    font-weight: 600
+}
+
+.card:hover small {
+    font-weight: 600
+}
+
+.card:hover .layer {
+    top: 0
+}
+
+.card .content {
+    position: relative;
+    z-index: 2
+}
+
+.card .content .img-1 {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white !important
+}
+
+.card h4 {
+    color: #fff;
+    font-weight: 500
+}
+
+hr {
+    background-color: rgb(117, 117, 117);
+    width: 80% !important;
+    transition: 1s
+}
+
+.bold {
+    font-weight: 500
+}
+
+#quotes {
+    opacity: 0.1;
+    filter: alpha(opacity=40)
+}
+
+@media (max-width: 479px) {
+    p {
+        padding: 0 !important
+    }
+
+    .img-1 {
+        margin-right: 0 !important
+    }
+}
+.footer {
+   text-align:left;
+   position:reletive;
+   left: 10px;
+   bottom:10px;
+   padding:50px;
+   width: 100%;
+   height:50%;
+   background-color:#C0C0C0;
+   color:black;
+   
+}
+@media only screen and (max-device-width : 1024px) {
+#footer {
+width: 75%;
+position: relative;
+}
+}
+.fa {
+  padding:30;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+   
+<!-- Top navigation -->
+<div class="topnav">
+   
+  <!-- Left-aligned links (default) -->
+  <a href="#news">LOGO</a>
+  <a href="#home" class="active">Home</a>
+	<a href="#About" class="active">About</a>
+	<a href="#home" class="active">Services</a>
+	<a href="#home" class="active">Pages</a>
+  
+  
+  <!-- Right-aligned links -->
+  <div class="topnav-right">
+    <a href="#search">Call Us :+8812876219</a>
+	<a href="#search">En<i class="material-icons">&#xe5cf;</i></a>
+	<a href="#search">Contact Us</a>
+  </div>
+  
+</div>
+<!--------------------menu ends---------------------!>
+<!------------------section 2 starts----------------!>
+<div class="container my-5 ">
+
+  <div class="row">
+    <div class="col-sm-6">
+     <div class="header">
+  <h1 style="font-size:50;"><b>We Are Creative Digital and Marketing Agencey</b></h1>
+  <h1 style="font-size:1;">We use methods that are tailored to each of your business and we help you make a better world</h1>
+  <img src="cap.jpg" style="width:30%; height:30%"><a href="url"><h1><b>Watch Demo<br>Vedio</b></h1></a>
+</div> 
+    </div>
+    <div class="col-sm-6">
+     <div class="row"> 
+  <div class="column">
+    <img src="pexels-italo-melo-2379004.jpg"  class="img-circle" "border-radius:90px" style="width:100%">
+    
+  </div>
+  <div class="column">
+    
+	<img src="pexels-fauxels-3183183.jpg" class="img-circle" style="width:100%">
+    <img src="pexels-fauxels-3184291.jpg" class="img-circle" style="width:100%">
+    
+   
+  </div> 
+</div>
+    </div>
+  </div>
+</div>
+<!-----------------section 2 ends-------------------!>
+<!-------------what we do ------------------------!>
+<div class="container my-5 justify-content-center">
+ <h1 style="font-size:4;"><b>Services</b></h1>
+  <h1 style="font-size:4;">What we do</h1>
+  <br>
+  <br>
+  <div class="row">
+      
+    </div>
+    <div class="col-sm-4">
+      <img src="stargy.jpg"  style="width:38%; height:38%">
+	  <h1 style="align-content=space-around; font-size:4;"><b>Strategy & Research</b></h1>
+	  <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt</h3>
+    </div>
+	<div class="col-sm-4">
+      <img src="capt2.jpg"  style="width:38%; height:38%">
+	  <h1 style="align-content=space-around; font-size:4;"><b>Design & Development</b></h1>
+	  <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor  incididunt</h3>
+    </div>
+    <div class="col-sm-4">
+      <img src="Capture.jpg"  style="width:38%; height:38%">
+	  <h1 style="align-content=space-around; font-size:4;"><b>Management & Marketing</b></h1>
+	  <h3>Lorem ipsum dolor sit  amet consectetur adipiscing elit, sed do eiusmod tempor incididunt</h3>
+    </div>
+	
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<!--------------------------section4 -------------!>
+
+<div class="container my-5 justify-content-center">
+  <div class="row">
+    <div class="col-sm-4" >
+      <img src="pexels-pixabay-532220.jpg" class="img-circle" style=" float:right; width:70%; height:90%" >
+    </div>
+    <div class="col-sm-8" "color:#0000";>
+      <h1>About us</h1><br>
+      <h1><b>MISSION:</b></h1><h3 style "text-align:justify; line-height:2; font-size:5"> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3><br>
+      <h1><b>VISION:</b></h1><h3 style "align-content=space-around; font-size:5">  Our vision Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor siconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+    </div>
+  </div>
+</div>
+<!---------------------section 6------------------!>
+
+<!---------------section 7 starts-----------------------!>
+
+<div class="container my-5 justify-content-center">
+<h2><b>Testimony</b></h2>
+  <H1>What People Say About Us</H1>
+    <div class=" row justify-content-center ">
+        <div class="col-lg-4 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/nUNhspp.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic,</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">Sophia Smith</h4> <small class="mt-0 text-white">Hair Specialist</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-half-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="col-lg-4 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/nUNhspp.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">Sophia Smith</h4> <small class="mt-0 text-white">Hair Specialist</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-half-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12 mt-5 ">
+            <div class="card mt-3 ">
+                <div class="layer"></div>
+                <div class="content">
+                    <div class="card-header text-center border-0">
+                        <div class="row justify-content-center my-4">
+                            <div class="col">
+                                <div class="d-flex flex-lg-row flex-column-reverse no-gutters justify-content-center">
+                                    <div class="col-3 text-right"><img class="img-fluid" id="quotes" src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png" width="110" height="110"></div>
+                                    <div class="col pr-lg-5"><img class=" img-1 mr-lg-5 " src="https://i.imgur.com/HjKTNkG.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center pb-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col text-center justify-content-center ">
+                                <p class="bold text-center px-md-3"> Growth of data is exponential and our ability to get true insight that matter was challenging with classic.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-auto mb-4">
+                    <div class="card-footer text-center border-0 mt-0 pt-0 mb-3">
+                        <div class="row text-center name mt-auto ">
+                            <div class="col">
+                                <h4 class="mb-0 Elizabeth">Smike Housin</h4> <small class="mt-0 text-white">Director of Marketing</small>
+                                <p><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span><span class="fa fa-star-o text-warning mr-1"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<! -----------------section 7 ends--------- !>
+
+
+<!------------------------------------ our compny news---------!>
+<div class="article-list">
+        <div class="container">
+		<h2>Our Blog</h2>
+                <H1><b>Our Company News</b> </H1>
+            <div class="intro">
+                
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-circle" src="https://i.imgur.com/nUNhspp.jpg" width="110" height="110"></a>
+                    <h3 class="name">Frank Lampard</h3><br><h4>20 Jan 2020</h4>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-circle" src="https://i.imgur.com/HjKTNkG.jpg" width="110" height="110"></a>
+                    <h3 class="name">Paul Scholes</h3><br><h4>15 Jan 2020</h4>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+                <div
+                    class="col-sm-6 col-md-4 item"><a href="#"><img class="img-circle" src="https://i.imgur.com/nUNhspp.jpg" width="110" height="110"></a>
+                    <h3 class="name">Hary Kane</h3><br><h4>15 Jan 2020</h4>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------------	section6-----ends-------!>
+<div class="container my-5 justify-content-center">
+  <div class="row">
+     <div class="col-sm-6" "color:#0000";>
+	 <h1 style=" float:right;font-size:4;"><b>Let's Work Together and <br> Make a Better World</b></h1>
+      
+    </div>
+	<div class="col-sm-6" >
+      <img src="cont.jpg" style="width:70%; height:70%" >
+    </div>
+  </div>
+</div>
+<! ---------------footer strats--------------- !>
+<footer>
+
+ <div class="footer">
+ <br>
+ <h2><b>LOGO</b></h2>
+
+   <div class="container">
+                <div class="row">
+				<div class="col-sm-1 item">
+				</div>
+                    <div class="col-sm-3 item">
+                        <h3><b>Our Contact</b></h3>
+                        <h4><b>Address:</b><br> 4045 Imp Road UK City <br>
+						Tel (04)425277/235455<br>
+						Email:inbox@gmail.co.in</h4>
+                    </div>
+                    <div class="col-sm-4  item">
+                        <h2><b>About Us</b></h2><h4 style "text-align:justify; line-height:2">Praesent sed lobortis mi. Suspendisse vel placerac sem lacus.
+						Ut rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</h4>
+                    </div>
+                    <div class="col-md-3 item">
+                        <h2><b>Subscribe</b></h2><br>
+						<input type="Email" id="mail" name="mail" placeholder="Your Email"><br><br>
+                        <h2><b>Follow Us</b></h2><br>
+						<div class="fa"><a href="#"><i class="icon ion-social-facebook"></a></i><nbsp><a href="#"><i class="icon ion-social-twitter"></i></a><nbsp><a href="#"></div>
+                </div>
+				<div class="col-sm-1 item"></div>
+					</div>
+                    
+                <p class="copyright; float:right;"><b>Company Name © 2018</b></p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</footer>
+	
+</div>
+</body>
+</html>
